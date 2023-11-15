@@ -1,4 +1,4 @@
-describe("Social Media App: Login", () => {
+describe("Social Media App: Logout", () => {
   beforeEach(() => {
     cy.visit("/");
     cy.clearLocalStorage();
@@ -17,10 +17,12 @@ describe("Social Media App: Login", () => {
     cy.get("#loginForm #loginPassword")
       .should("exist")
       .type("Testing123{enter}");
-  });
 
-  it("Can login and check token exist in localstorage", () => {
     cy.get("button[type=submit]").contains("Login").click();
     cy.url().should("include", "?view=profile");
+  });
+
+  it("should clear localStorage after clicking the logout button", () => {
+    cy.get('[data-auth="logout"]').should("be.visible").click();
   });
 });
