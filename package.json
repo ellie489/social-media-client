@@ -1,7 +1,7 @@
 {
-  "name": "css-frameworks-ca",
+  "name": "workflow-ca",
   "version": "1.0.4",
-  "description": "Test",
+  "description": "Workflow with unit testing and E2E testing.",
   "main": "index.js",
   "type": "module",
   "scripts": {
